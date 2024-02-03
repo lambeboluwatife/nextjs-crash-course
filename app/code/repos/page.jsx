@@ -6,6 +6,8 @@ async function fetchRepos() {
     "https://api.github.com/users/lambeboluwatife/repos"
   );
 
+  await new Promise((resolve) => setTimeout(resolve, 1000)); // Wait 1 second
+
   const repos = await response.json();
   return repos;
 }
